@@ -1,0 +1,147 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles_content.css" />
+    <link rel="stylesheet" href="../css/styles_side.css" />
+    <link rel="stylesheet" href="../css/styles_top.css" />
+    <link rel="stylesheet" href="../css/styles_details.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap"
+      rel="stylesheet"
+    />
+    <!--Load the AJAX API-->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      // Load the Visualization API and the corechart package.
+      google.charts.load("current", { packages: ["corechart"] });
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn("string", "Topping");
+        data.addColumn("number", "Slices");
+        data.addRows([
+          ["Mushrooms", 3],
+          ["Onions", 1],
+          ["Olives", 1],
+          ["Zucchini", 1],
+          ["Pepperoni", 2],
+        ]);
+
+        // Set chart options
+        var options = {
+          title: "How Much Pizza I Ate Last Night",
+          width: 400,
+          height: 300,
+        };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(
+          document.getElementById("chart_div")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="root">
+      <div class="side-nav">
+        <div class="home">
+          <h1>stripe</h1>
+        </div>
+        <nav>
+          <ul class="side-list">
+            <li>
+              <i class="material-icons red material-icons-side">home</i>Home
+            </li>
+            <li>
+              <i class="material-icons material-icons-side">payments</i>Payments
+            </li>
+            <li>
+              <i class="material-icons material-icons-side">import_export</i>
+              Transfers
+            </li>
+            <li>
+              <i class="material-icons material-icons-side">account_circle</i>
+              Customers
+            </li>
+            <li>Radar</li>
+            <li>Subscription</li>
+            <li>Connect</li>
+            <li>Products</li>
+            <li>Webhooks</li>
+            <li>API</li>
+            <li>Viewing Test Data</li>
+            <li>Business Settings</li>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <div class="top-nav">
+          <nav class="nav-bar">
+            <ul class="nav-list">
+              <div class="search-bar">
+                <li>
+                  <input class="search" type="text" placeholder="search" />
+                </li>
+              </div>
+              <div class="nav-items">
+                <li class="list-item">
+                  <i class="material-icons">account_circle</i>
+                </li>
+                <li class="list-item">
+                  <i class="material-icons">notifications</i>
+                </li>
+                <li class="list-item">
+                  <i class="material-icons">import_contacts</i>
+                </li>
+                <li class="list-item">
+                  <i class="material-icons">streetview</i>
+                </li>
+              </div>
+            </ul>
+          </nav>
+          <div class="additional-info-div">
+            <table class="info-table">
+              <tr class="info-table-row"></tr>
+            </table>
+          </div>
+          <!-- Injected By JS -->
+        </div>
+        <div class="content-details">
+          <div class="detail-container">
+            <div class="detail-heading">
+              <div class="detail-heading-left">OVERVIEW</div>
+              <div class="detail-heading-right">Timeline</div>
+            </div>
+            <div class="detail-graphs">
+              <div class="detail-graph-1 card" id="chart_div">MAIN GRAPH</div>
+              <div class="subgraph">
+                <div class="subgraph-1 card">SUBGRAPH 1</div>
+                <div class="subgraph-2 card">SUBGRAPH-2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script type="module" src="../js/app.js"></script> -->
+    <script type="module" src="../js/infoTableRow.js"></script>
+  </body>
+</html>
