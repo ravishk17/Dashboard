@@ -17,7 +17,11 @@
 .home > h1 {
   margin: 5% 0 0 0;
   font-family: "Francois One", sans-serif;
+  color: rgba(0, 0, 255, 0.8);
+}
+.home > h1:hover {
   color: blue;
+  cursor: pointer;
 }
 .side-list {
   padding: 0 20px 20px 20px;

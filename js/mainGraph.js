@@ -1,33 +1,28 @@
 const leftHeading = document.querySelector(".detail-heading-left");
 leftHeading.innerText = "OVERVIEW";
+let timeline = `<ul>
+                  <li class="timeline">THIS WEEK</li>
+                  <li class="timeline">THIS MONTH</li>
+                  <li class="timeline">THIS YEAR</li>
+                </ul>`;
 const rightHeading = document.querySelector(".detail-heading-right");
-rightHeading.innerText = "TIMELINE";
+rightHeading.innerHTML = timeline;
+
+import graphData from "./mainGraphData.js";
+console.log(graphData.val);
 let myChart = document.getElementById("myChartMain").getContext("2d");
 //global options
 Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
 Chart.defaults.global.defaultFontColor = "#777";
-let grossVolume = new Chart(myChart, {
+new Chart(myChart, {
   type: "line",
   data: {
-    labels: [
-      "JAN",
-      "FEB",
-      "MAR",
-      "APR",
-      "MAY",
-      "JUN",
-      "JUL",
-      "AUG",
-      "SEP",
-      "OCT",
-      "NOV",
-      "DEC",
-    ],
+    labels: graphData.label,
     datasets: [
       {
         label: "USD Total",
-        data: [0, 180, 120, 250, 210, 310, 190, 598, 320, 280, 330, 240],
+        data: graphData.val,
         // backgroundColor: "green",
         backgroundColor: "transparent",
         // backgroundColor: [

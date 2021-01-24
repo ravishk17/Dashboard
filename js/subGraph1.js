@@ -1,16 +1,17 @@
+import subGraphData1 from "./subGraphData1.js";
 let mySubgraph1 = document.getElementById("mySubgraph1").getContext("2d");
 //global options
 Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
 Chart.defaults.global.defaultFontColor = "#777";
-let successfulCharges = new Chart(mySubgraph1, {
+new Chart(mySubgraph1, {
   type: "line",
   data: {
-    labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
+    labels: subGraphData1.label,
     datasets: [
       {
         label: "USD Total",
-        data: [0, 180, 120, 250, 210, 310, 190, 598, 320, 280, 330, 240],
+        data: subGraphData1.val,
         // backgroundColor: "green",
         backgroundColor: "transparent",
         // backgroundColor: [

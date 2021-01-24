@@ -5,7 +5,7 @@ let html = "";
 for (const key in data) {
   html += `<td>
             <span class="table-val">${data[key]}</span><br />
-            <span>${key}</span>
+            <span class="table-label">${key}</span>
         </td>`;
 }
 infoTableRow.innerHTML = html;

@@ -12,6 +12,7 @@
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  margin-right: 16px;
   /* padding-bottom: 20px; */
   /* padding-right: 2%; */
 }
@@ -85,4 +86,10 @@ td {
 }
 .table-val {
   font-size: x-large;
+}
+.table-label {
+  font-size: small;
+  /* padding: 15px; */
+  /* border: 2px solid red; */
+  color: rgba(255, 255, 255, 0.6);
 }
