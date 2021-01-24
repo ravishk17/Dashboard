@@ -88,16 +88,20 @@
         <div class="content-details">
           <div class="detail-container">
             <div class="detail-heading">
-              <div class="detail-heading-left">OVERVIEW</div>
+              <div class="detail-heading-left"></div>
               <div class="detail-heading-right">Timeline</div>
             </div>
             <div class="detail-graphs">
               <div class="detail-graph-1 card">
-                <canvas id="myChart"></canvas>
+                <canvas id="myChartMain"></canvas>
               </div>
               <div class="subgraph">
-                <div class="subgraph-1 card">SUBGRAPH 1</div>
-                <div class="subgraph-2 card">SUBGRAPH-2</div>
+                <div class="subgraph-1 card">
+                  <canvas id="mySubgraph1"></canvas>
+                </div>
+                <div class="subgraph-2 card">
+                  <canvas id="mySubgraph2"></canvas>
+                </div>
               </div>
             </div>
           </div>
@@ -107,5 +111,7 @@
     <!-- <script type="module" src="../js/app.js"></script> -->
     <script type="module" src="../js/infoTableRow.js"></script>
     <script src="../js/mainGraph.js"></script>
+    <script src="../js/subGraph1.js"></script>
+    <script src="../js/subGraph2.js"></script>
   </body>
 </html>

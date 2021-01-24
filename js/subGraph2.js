@@ -1,29 +1,12 @@
-const leftHeading = document.querySelector(".detail-heading-left");
-leftHeading.innerText = "OVERVIEW";
-const rightHeading = document.querySelector(".detail-heading-right");
-rightHeading.innerText = "TIMELINE";
-let myChart = document.getElementById("myChartMain").getContext("2d");
+let mySubgraph2 = document.getElementById("mySubgraph2").getContext("2d");
 //global options
 Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
 Chart.defaults.global.defaultFontColor = "#777";
-let grossVolume = new Chart(myChart, {
+let customersCreated = new Chart(mySubgraph2, {
   type: "line",
   data: {
-    labels: [
-      "JAN",
-      "FEB",
-      "MAR",
-      "APR",
-      "MAY",
-      "JUN",
-      "JUL",
-      "AUG",
-      "SEP",
-      "OCT",
-      "NOV",
-      "DEC",
-    ],
+    labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
     datasets: [
       {
         label: "USD Total",
@@ -49,7 +32,7 @@ let grossVolume = new Chart(myChart, {
   options: {
     title: {
       display: true,
-      text: "GROSS VOLUME",
+      text: "CUSTOMERS CREATED",
       position: "top",
       fontColor: "#16c79a",
     },
@@ -62,7 +45,7 @@ let grossVolume = new Chart(myChart, {
     },
     layout: {
       padding: {
-        left: 30,
+        left: 0,
         right: 0,
         bottom: 0,
         top: 0,
